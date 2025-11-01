@@ -48,7 +48,8 @@ CLIENT_NAME=Test-Restaurant
 DATA_FILE_PATH=/absolute/path/to/on-premise-client/data/sample.bin
 ```
 
-**Important**: Use the full absolute path for `DATA_FILE_PATH`!
+**Important**: Use the full absolute path for `DATA_FILE_PATH`! if outside folder on-premise-client,
+if path in ./on-premise-client/data, you can write ./data/sample.bin for parameter in API Cloud Server /download/request
 
 ## Step 3: Create Test File
 
@@ -107,6 +108,14 @@ curl -X POST http://localhost:3000/api/download/request \
   -d '{
     "clientId": "YOUR_CLIENT_ID_HERE",
     "filePath": "/absolute/path/to/on-premise-client/data/sample.bin"
+  }'
+
+or can use relative path with note: the folder path still in on-premise-client folder
+curl -X POST http://localhost:3000/api/download/request \
+  -H "Content-Type: application/json" \
+  -d '{
+    "clientId": "YOUR_CLIENT_ID_HERE",
+    "filePath": "./data/sample.bin"
   }'
 ```
 
