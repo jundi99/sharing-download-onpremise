@@ -140,6 +140,4 @@ vite.config.ts.timestamp-*
 
 # Project specific
 downloads/*
-!downloads/.gitkeep
 data/*
-!data/.gitkeep
