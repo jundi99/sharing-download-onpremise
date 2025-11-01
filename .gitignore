@@ -140,5 +140,4 @@ vite.config.ts.timestamp-*
 
 # Project specific
 downloads/
-uploads/
-.DS_Store
+data/
